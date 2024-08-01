@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<style>
+	</style>
+	<meta charset="UTF-8">
+	<link rel="icon" href="img/favicon-abe32304.png">
+	<meta name="robots" content="noindex,nofollow">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<title>Fast Build</title>
+	<!-- <link rel="stylesheet" href="https://1panel.wantdo.com/assets/css/index-d42199db.css"> -->
+	<link rel="stylesheet" href="css/base.css">
+	<link rel="stylesheet" href="css/index-d42199db.css">
+	<link rel="stylesheet" href="css/index-173e8efc.css">
+	<link rel="stylesheet" href="css/index-c56ba152.css">
+	<link rel="stylesheet" href="css/select-3bf869d2.css">
+	<link rel="stylesheet" href="css/popover-aabbd9ff.css">
+	<script src="js/jquery-3.4.0.min.js"></script>
+	<link href="https://lib.baomitu.com/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+	<link href='https://fonts.googleapis.com/css?family=Alegreya+Sans:400,700,800' rel='stylesheet' type='text/css'>
+	<!-- <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/layer/3.1.1/theme/default/layer.css">
+		<script src="https://cdn.bootcdn.net/ajax/libs/layer/3.1.1/layer.js"></script> -->
+	<!-- <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+        <script src="https://unpkg.com/element-ui@2.0.11/lib/index.js"></script> -->
+	<script src="js/layer/layer.js"></script>
+	<script src="js/vue.js"></script>
+	<script src="js/index.js"></script>
+	<link href="https://lib.baomitu.com/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+	<script src="https://cdn.jsdelivr.net/npm/sortablejs@1.14.0/Sortable.min.js"></script>
+	<style>
+		.cursor-grab {
+			cursor: grab;
+		}
+
+		.cursor-grabbing {
+			cursor: grabbing;
+		}
+	</style>
+</head>
+
+<body>
+
+	<div aria-modal="true" aria-labelledby="el-id-1394-522" aria-describedby="el-id-1394-523" class="el-drawer rtl open"
+		role="dialog" style="width: 100%;">
+		<span class="el-drawer__sr-focus" tabindex="-1">
+		</span>
+		<header class="el-drawer__header">
+			<div data-v-447e52a0="" class="el-page-header el-page-header--has-extra">
+				<!--v-if-->
+				<div class="el-page-header__header">
+					<div class="el-page-header__left">
+						<!-- 	<div class="el-page-header__back" role="button" tabindex="0">
+						<div aria-label="返回" class="el-page-header__icon">
+							<i class="el-icon">
+								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
+									<path fill="currentColor" d="M224 480h640a32 32 0 1 1 0 64H224a32 32 0 0 1 0-64z">
+									</path>
+									<path fill="currentColor" d="m237.248 512 265.408 265.344a32 32 0 0 1-45.312 45.312l-288-288a32 32 0 0 1 0-45.312l288-288a32 32 0 1 1 45.312 45.312L237.248 512z">
+									</path>
+								</svg>
+							</i>
+						</div>
+						<div class="el-page-header__title">
+							返回
+						</div>
+					</div> -->
+						<div class="el-divider el-divider--vertical" role="separator" style="--el-border-style: solid;">
+							<!--v-if-->
+						</div>
+						<div class="el-page-header__content">
+							<span>
+								项目
+							</span>
+							<span>
+								-
+								<span class="el-tag el-tag--success el-tag--default el-tag--dark">
+									<span class="el-tag__content" id="projectName">
+										default
+									</span>
+									<!--v-if-->
+								</span>
+							</span>
+							<!---->
+							<!---->
+						</div>
+					</div>
+					<div class="el-page-header__extra">
+						<button data-v-447e52a0="" aria-disabled="false" type="button"
+							class="el-button el-button--default is-plain fullScreen el-tooltip__trigger el-tooltip__trigger">
+							<i class="el-icon">
+								<svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
+									<path fill="currentColor"
+										d="m160 96.064 192 .192a32 32 0 0 1 0 64l-192-.192V352a32 32 0 0 1-64 0V96h64v.064zm0 831.872V928H96V672a32 32 0 1 1 64 0v191.936l192-.192a32 32 0 1 1 0 64l-192 .192zM864 96.064V96h64v256a32 32 0 1 1-64 0V160.064l-192 .192a32 32 0 1 1 0-64l192-.192zm0 831.872-192-.192a32 32 0 0 1 0-64l192 .192V672a32 32 0 1 1 64 0v256h-64v-.064z">
+									</path>
+								</svg>
+							</i>
+							<!--v-if-->
+						</button>
+					</div>
+				</div>
+				<!--v-if-->
+			</div>
+			<button aria-label="el.drawer.close" class="el-drawer__close-btn" type="button">
+				<i class="el-icon el-drawer__close">
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
+						<path fill="currentColor"
+							d="M764.288 214.592 512 466.88 259.712 214.592a31.936 31.936 0 0 0-45.12 45.12L466.752 512 214.528 764.224a31.936 31.936 0 1 0 45.12 45.184L512 557.184l252.288 252.288a31.936 31.936 0 0 0 45.12-45.12L557.12 512.064l252.288-252.352a31.936 31.936 0 1 0-45.12-45.184z">
+						</path>
+					</svg>
+				</i>
+			</button>
+		</header>
+		<div id="el-id-1394-523" class="el-drawer__body">
+			<div data-v-447e52a0="">
+				<div data-v-447e52a0="" class="el-select el-select--default fetchClass" style="display: none;">
+					<div class="select-trigger el-tooltip__trigger el-tooltip__trigger">
+						<div class="el-input el-input--default el-input--prefix el-input--suffix">
+							<div class="el-input__wrapper">
+								<span class="el-input__prefix">
+									<span class="el-input__prefix-inner">
+										<div
+											style="height: 100%; display: flex; justify-content: center; align-items: center;">
+											项目
+										</div>
+									</span>
+								</span>
+								<input class="el-input__inner" type="text" readonly="" autocomplete="off" tabindex="0"
+									placeholder="请选择" id="el-id-1394-665">
+								<span class="el-input__suffix">
+									<span class="el-input__suffix-inner">
+										<i class="el-icon el-select__caret el-select__icon">
+											<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
+												<path fill="currentColor"
+													d="M831.872 340.864 512 652.672 192.128 340.864a30.592 30.592 0 0 0-42.752 0 29.12 29.12 0 0 0 0 41.6L489.664 714.24a32 32 0 0 0 44.672 0l340.288-331.712a29.12 29.12 0 0 0 0-41.728 30.592 30.592 0 0 0-42.752 0z">
+												</path>
+											</svg>
+										</i>
+									</span>
+								</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div data-v-447e52a0="">
+					<div data-v-447e52a0="" class="el-select el-select--default fetchClass" style="width: 15%;">
+						<div class="select-trigger el-tooltip__trigger el-tooltip__trigger">
+							<div class="el-input el-input--default el-input--prefix el-input--suffix" id="app">
+								<div class="el-input__wrapper">
+									<span class="el-input__prefix">
+										<span class="el-input__prefix-inner">
+											<div
+												style="height: 100%; display: flex; justify-content: center; align-items: center;">
+												项目
+											</div>
+										</span>
+									</span>
+
+									<el-select v-model="selectedOption" id="selectedProject" placeholder="请选择"
+										autocomplete="off" popper-class="select-option">
+										<el-option v-for="item in options" :key="item.value" :label="item.label"
+											:value="item.value">
+										</el-option>
+									</el-select>
+								</div>
+							</div>
+						</div>
+					</div>
+
+
+					<!-- <div data-v-447e52a0="" class="el-select el-select--default tailClass" modelmodifiers="[object Object]">
+				<div class="select-trigger el-tooltip__trigger el-tooltip__trigger">
+					
+					<div class="el-input el-input--default el-input--prefix el-input--suffix">
+						
+						<div class="el-input__wrapper">
+							<span class="el-input__prefix">
+								<span class="el-input__prefix-inner">
+									<div style="height: 100%; display: flex; justify-content: center; align-items: center;">
+										条数
+									</div>
+								</span>
+							</span>
+							<input class="el-input__inner" type="text" readonly="" autocomplete="off"
+							tabindex="0" placeholder="请选择" id="el-id-1394-666">
+							<span class="el-input__suffix">
+								<span class="el-input__suffix-inner">
+									<i class="el-icon el-select__caret el-select__icon">
+										<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
+											<path fill="currentColor" d="M831.872 340.864 512 652.672 192.128 340.864a30.592 30.592 0 0 0-42.752 0 29.12 29.12 0 0 0 0 41.6L489.664 714.24a32 32 0 0 0 44.672 0l340.288-331.712a29.12 29.12 0 0 0 0-41.728 30.592 30.592 0 0 0-42.752 0z">
+											</path>
+										</svg>
+									</i>
+								
+								</span>
+							</span>
+						</div>
+					
+					</div>
+				</div>
+			</div> -->
+					<!-- <div data-v-447e52a0="" class="margin-button" style="float: left;">
+						<label data-v-447e52a0="" class="el-checkbox el-checkbox--default is-bordered">
+							<span class="el-checkbox__input">
+								<input class="el-checkbox__original" type="checkbox" aria-hidden="false" value="false">
+								<span class="el-checkbox__inner">
+								</span>
+							</span>
+							<span class="el-checkbox__label">
+								追踪
+							</span>
+						</label>
+					</div> -->
+					<!-- <button data-v-447e52a0="" aria-disabled="false" type="button"
+						class="el-button el-button--default margin-button">
+						<i class="el-icon">
+							<svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
+								<path fill="currentColor"
+									d="M160 832h704a32 32 0 1 1 0 64H160a32 32 0 1 1 0-64zm384-253.696 236.288-236.352 45.248 45.248L508.8 704 192 387.2l45.248-45.248L480 584.704V128h64v450.304z">
+								</path>
+							</svg>
+						</i>
+						<span class="">
+							下载
+						</span>
+					</button> -->
+					&nbsp;&nbsp;&nbsp;
+
+					<button data-v-447e52a0="" aria-disabled="false" type="button" class="el-button el-button--primary"
+						id="build">
+						<span class="">
+							构建
+						</span>
+					</button>
+					<button id="openModal" class="el-button el-button--primary ">
+						管理项目
+					</button>
+					<button data-v-447e52a0="" aria-disabled="false" type="button"
+						class="el-button el-button--default margin-button" @click="clearConsole" id="clearConsole">
+						<i class="el-icon">
+							<svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
+								<path fill="currentColor"
+									d="M160 256H96a32 32 0 0 1 0-64h256V95.936a32 32 0 0 1 32-32h256a32 32 0 0 1 32 32V192h256a32 32 0 1 1 0 64h-64v672a32 32 0 0 1-32 32H192a32 32 0 0 1-32-32V256zm448-64v-64H416v64h192zM224 896h576V256H224v640zm192-128a32 32 0 0 1-32-32V416a32 32 0 0 1 64 0v320a32 32 0 0 1-32 32zm192 0a32 32 0 0 1-32-32V416a32 32 0 0 1 64 0v320a32 32 0 0 1-32 32z">
+								</path>
+							</svg>
+						</i>
+						<span>
+							清空
+						</span>
+					</button>
+					<script>
+						new Vue({
+							el: '#clearConsole',
+							methods: {
+								clearConsole() {
+									document.getElementById('console').textContent = ''; // 使用 DOM 操作清空 console 元素的内容
+								}
+							}
+						});
+					</script>
+
+
+				</div>
+
+
+				<div class="v-codemirror" linewrapping="true" matchbrackets="true" theme="cobalt" styleactiveline="true"
+					style="display: contents;">
+					<div class="ͼ1 ͼo ͼ16" id="console">
+						<div aria-live="polite" style="position: fixed; top: -10000px;"></div>
+						<div tabindex="-1" class="cm-scroller" id="cm-scroller">
+							<div id="cm-gutters" class="cm-gutters" aria-hidden="true"
+								style="min-height: 0px; position: sticky;">
+								<div id="line" class="cm-gutter cm-lineNumbers">
+									<div class="cm-gutterElement"
+										style="height: 0px; visibility: hidden; pointer-events: none;">999</div>
+									<!-- line -->
+								</div>
+							</div>
+							<div id="msg" spellcheck="false" autocorrect="off" autocapitalize="off" translate="no"
+								contenteditable="false" class="scrollingDiv"
+								style="tab-size: 4; flex-basis: 1933px;margin-top: 8px;" role="textbox"
+								aria-multiline="true" aria-autocomplete="list" data-language="javascript"
+								aria-readonly="true">
+								<div contenteditable="false" style="height: 0px;"></div>
+								<!-- msg -->
+							</div>
+						</div>
+					</div>
+
+
+
+
+					<!-- <div class="el-drawer__footer">
+						<span data-v-447e52a0="" class="dialog-footer">
+							<el-button class="el-button el-button--primary" round id="build">Build</el-button>
+						</span>
+					</div> -->
+
+				</div>
+
+				<script>
+					$(document).ready(function () {
+						var name = "admin";
+						var hostname = window.location.hostname;
+						var port = window.location.port;
+						var req_url = hostname + ":" + port;
+						var protocol = window.location.protocol;
+						console.log(req_url);
+						var ws_url;
+						if (protocol === 'http:') {
+							ws_url = 'ws://' + req_url
+						} else if (protocol === 'https:') {
+							ws_url = 'wss://' + req_url
+						} else {
+							console.error('Unsupported protocol:', protocol);
+						}
+						console.log(ws_url);
+						let i = 0;
+						var socket;
+						if (typeof (WebSocket) == "undefined") {
+							console.log("遗憾：您的浏览器不支持WebSocket");
+						} else {
+							console.log("恭喜：您的浏览器支持WebSocket");
+							//实现化WebSocket对象
+							//指定要连接的服务器地址与端口建立连接
+							//注意ws、wss使用不同的端口。我使用自签名的证书测试，
+							//无法使用wss，浏览器打开WebSocket时报错
+							//ws对应http、wss对应https。
+							socket = new WebSocket(ws_url + "/ws/" + name);
+							//连接打开事件
+							socket.onopen = function () {
+								console.log("Socket 已打开");
+								// socket.send("消息发送测试(From Client)");
+								var line = '<div class="cm-gutterElement" style="height: 18.1875px; margin-top: 8px;">1</div>'
+								$("#line").append(line);
+								$("#msg").append('<div class="cm-line"><span class="ͼu">连接服务端...</span></div>');
+								i = i + 1;
+							};
+							//收到消息事件
+							socket.onmessage = function (msg) {
+								console.log(msg.data);
+								i = i + 1;
+								var line = '<div class="cm-gutterElement" style="height: 18.1875px;">' + i + '</div>'
+								$("#line").append(line);
+								$("#msg").append('<div class="cm-line"><span class="ͼu">' + msg.data + '</span></div>');
+
+								// 滚动到 msg 的底部
+								var scroller = document.getElementById("cm-scroller");
+								scroller.scrollTop = scroller.scrollHeight;
+							};
+							//连接关闭事件
+							socket.onclose = function () {
+								layer.msg("Socket已关闭");
+							};
+							//发生了错误事件
+							socket.onerror = function () {
+								layer.alert("Socket发生了错误");
+							}
+
+							//窗口关闭时，关闭连接
+							window.unload = function () {
+								socket.close();
+							};
+						}
+
+						$("#build").click(function () {
+							var projectName = $("#selectedProject").val();
+							console.log("已选择：" + projectName);
+							if (projectName == null || projectName == 'null' || projectName == '') {
+								layer.msg("请选择项目");
+								return;
+							}
+							layer.confirm('确认要构建' + projectName + '吗？', {
+								btn: ['确认', '取消'] //按钮
+							}, function () {
+								$.ajax({
+									url: 'http://' + req_url + '/api/push?userName=' + name + '&projectName=' + projectName,
+									type: "GET",
+									success: function (data) {
+										layer.msg(data);
+									}
+								});
+							});
+						})
+					});
+				</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+				<div class="container mx-auto p-4">
+
+
+					<div id="projectModal"
+						class="fixed inset-0 bg-gray-600 bg-opacity-50 hidden items-center justify-center">
+						<div class="bg-white rounded-lg shadow-xl p-6 w-full max-w-md">
+							<div class="flex justify-between items-center mb-4">
+								<h2 class="text-2xl font-bold text-gray-800">项目管理</h2>
+								<button id="closeModal"
+									class="text-gray-500 hover:text-gray-700 transition duration-300 ease-in-out">
+									<svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+											d="M6 18L18 6M6 6l12 12"></path>
+									</svg>
+								</button>
+							</div>
+							<div class="mb-4 flex space-x-2">
+								<input id="newProject" type="text" placeholder="输入新项目名称"
+									class="flex-grow px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+								<button id="addProject"
+									class="bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded-lg shadow-md transition duration-300 ease-in-out">
+									添加
+								</button>
+							</div>
+							<ul id="projectList" class="space-y-2 max-h-60 overflow-y-auto"></ul>
+						</div>
+					</div>
+				</div>
+				<script>
+					$(document).ready(function () {
+						const $projectModal = $('#projectModal');
+						const $projectList = $('#projectList');
+						const $newProjectInput = $('#newProject');
+						const openModalBtn = $('#openModal');
+						let projects = [];
+
+						// 初始化 Sortable
+						new Sortable($projectList[0], {
+							animation: 150,
+							ghostClass: 'bg-gray-100',
+							onEnd: function (evt) {
+								// 更新 projects 数组以反映新的顺序
+								projects = Array.from($projectList.children()).map(li => $(li).find('.project-name').text());
+								saveProjects();
+							}
+						});
+
+						// 打开模态框
+						openModalBtn.on('click', async () => {
+							$projectModal.removeClass('hidden').addClass('flex');
+							await fetchProjects();
+						});
+
+						// 关闭模态框
+						$('#closeModal').click(function () {
+							$projectModal.addClass('hidden').removeClass('flex');
+						});
+
+						// 获取项目列表
+						async function fetchProjects() {
+							try {
+								const response = await $.ajax({
+									url: '/api/fetchProjects',
+									method: 'GET'
+								});
+								projects = response;
+								renderProjects();
+							} catch (error) {
+								console.error('Error fetching projects:', error);
+							}
+						}
+
+						// 渲染项目列表
+						function renderProjects() {
+							$projectList.empty();
+							projects.forEach((project, index) => {
+								const $li = $('<li>')
+									.addClass('flex items-center bg-white p-3 rounded-lg shadow-md transition duration-300 ease-in-out hover:shadow-lg')
+									.html(`
+                    <div class="drag-handle cursor-grab mr-3">
+                        <svg class="h-5 w-5 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </div>
+                    <span class="flex-grow project-name cursor-grab">${project}</span>
+                    <button class="delete-project text-red-500 hover:text-red-700 transition duration-300 ease-in-out ml-3">
+                        <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
+                        </svg>
+                    </button>
+                `);
+								$projectList.append($li);
+							});
+							addEventListeners();
+							initSelect();
+						}
+
+						// 添加事件监听器
+						function addEventListeners() {
+							$('.delete-project').click(function () {
+								const index = $(this).closest('li').index();
+								deleteProject(index);
+							});
+						}
+
+						// 添加新项目
+						$('#addProject').click(function () {
+							const newProject = $newProjectInput.val().trim();
+
+							// 检查是否重复
+							if (isDuplicateProject(newProject)) {
+								layer.msg('项目名称已存在');
+								return;
+							}
+
+							if (newProject) {
+								projects.push(newProject);
+								$newProjectInput.val('');
+								saveProjects();
+							}
+						});
+
+						// 检查重复项目名称的函数
+						function isDuplicateProject(projectName) {
+							return projects.includes(projectName);
+						}
+
+						// 删除项目
+						function deleteProject(index) {
+							layer.confirm('确定要删除这个项目吗？', {
+								btn: ['确认'],  // 按钮
+								title: '确认操作',      // 标题
+								icon: 3,               // 图标，可选参数，默认是问号
+							}, function () {
+								projects.splice(index, 1);
+								saveProjects();
+							});
+						}
+
+						// 保存项目列表
+						async function saveProjects() {
+							try {
+								await $.ajax({
+									url: '/api/saveProjects',
+									method: 'POST',
+									contentType: 'application/json',
+									data: JSON.stringify({ projects }),
+								});
+								console.log('Projects saved successfully');
+								await fetchProjects(); // 保存后重新获取并渲染项目列表
+							} catch (error) {
+								console.error('Error saving projects:', error);
+							}
+						}
+					});
+
+
+					let vueInstance = null; // 声明一个全局变量来存储 Vue 实例
+					initSelect();
+
+
+					function initSelect() {
+						if (!vueInstance) { // 检查是否已经存在 Vue 实例，避免重复初始化
+							vueInstance = new Vue({
+								el: '#app',
+								data: {
+									selectedOption: '', // 存储选择的项目
+									options: [] // 存储从后端获取的项目列表
+								},
+								mounted() {
+									// 页面加载时从后端获取项目列表
+									this.fetchProjects();
+								},
+								methods: {
+									fetchProjects() {
+										// 使用 Fetch API 发送 GET 请求获取项目列表数据
+										fetch('/api/fetchProjects')
+											.then(response => response.json())
+											.then(data => {
+												// 将项目名称数组转换为 { value, label } 的格式
+												this.options = data.map(project => ({
+													value: project,
+													label: project
+												}));
+											})
+											.catch(error => {
+												console.error('获取项目列表失败:', error);
+											});
+									},
+									updateOptions() {
+										// 更新项目列表数据
+										this.fetchProjects();
+									}
+								},
+								watch: {
+									selectedOption(newVal) {
+										// 监听选项的变化，将选中的 label 值放入 #projectName 元素中
+										document.getElementById('projectName').innerText = newVal;
+									}
+								}
+							});
+						} else {
+							// 如果 Vue 实例已经存在，直接调用更新方法
+							vueInstance.updateOptions();
+						}
+					}
+
+
+
+				</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
