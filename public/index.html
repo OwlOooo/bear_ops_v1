@@ -375,7 +375,7 @@
 								btn: ['确认', '取消'] //按钮
 							}, function () {
 								$.ajax({
-									url: 'http://' + req_url + '/api/push?userName=' + name + '&projectName=' + projectName,
+									url: protocol + '://' + req_url + '/api/push?userName=' + name + '&projectName=' + projectName,
 									type: "GET",
 									success: function (data) {
 										layer.msg(data);
