@@ -372,10 +372,10 @@
 								return;
 							}
 							layer.confirm('确认要构建' + projectName + '吗？', {
-								btn: ['确认', '取消'] //按钮
+								btn: ['确认', '取消'] 
 							}, function () {
 								$.ajax({
-									url: protocol + '://' + req_url + '/api/push?userName=' + name + '&projectName=' + projectName,
+									url: '/api/push?userName=' + name + '&projectName=' + projectName,
 									type: "GET",
 									success: function (data) {
 										layer.msg(data);
