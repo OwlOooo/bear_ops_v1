@@ -23,7 +23,7 @@ install_git() {
   elif command_exists apt-get; then
     sudo apt-get install -y git
   else
-    echo "无法确定包管理器，请手动安装 Git."
+    echo "无法确定包管理器，请手动安装 Git"
     exit 1
   fi
 }
