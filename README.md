@@ -10,3 +10,4 @@
    sudo ln -s /usr/local/bin/bear /usr/bin/bear
 ## 使用方法
 运行 bear 命令
+port:8976
