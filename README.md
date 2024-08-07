@@ -7,6 +7,6 @@
    curl -O https://raw.githubusercontent.com/OwlOooo/bear_ops_v1/main/install_bear_centos.sh
    chmod +x install_bear_centos.sh
    sudo mv install_bear_centos.sh /usr/local/bin/bear
-
+   sudo ln -s /usr/local/bin/bear /usr/bin/bear
 ## 使用方法
 运行 bear 命令
